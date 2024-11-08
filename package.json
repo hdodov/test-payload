@@ -15,6 +15,7 @@
     "start": "cross-env NODE_OPTIONS=--no-deprecation next start"
   },
   "dependencies": {
+    "@next/bundle-analyzer": "^15.0.3",
     "@payloadcms/db-mongodb": "beta",
     "@payloadcms/next": "beta",
     "@payloadcms/payload-cloud": "beta",
