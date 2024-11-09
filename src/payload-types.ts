@@ -30,9 +30,13 @@ export interface Config {
   db: {
     defaultIDType: string;
   };
-  globals: {};
-  globalsSelect: {};
-  locale: null;
+  globals: {
+    test: Test;
+  };
+  globalsSelect: {
+    test: TestSelect<false> | TestSelect<true>;
+  };
+  locale: 'en' | 'bg';
   user: User & {
     collection: 'users';
   };
@@ -241,6 +245,104 @@ export interface PayloadMigrationsSelect<T extends boolean = true> {
   batch?: T;
   updatedAt?: T;
   createdAt?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "test".
+ */
+export interface Test {
+  id: string;
+  text?: string | null;
+  items?:
+    | {
+        text?: string | null;
+        id?: string | null;
+      }[]
+    | null;
+  sections?:
+    | (
+        | {
+            'nonlocalized-one'?: string | null;
+            'text-one'?: string | null;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'block-one';
+          }
+        | {
+            'nonlocalized-two'?: string | null;
+            'text-two'?: string | null;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'block-two';
+          }
+      )[]
+    | null;
+  NAMED_TAB?: {
+    inside_named_tab?: string | null;
+  };
+  inside_unnamed_tab?: string | null;
+  group_field?: {
+    text_inside_group?: string | null;
+    inside_unnamed_tab_inside_group?: string | null;
+    named_tab?: {
+      inside_named_tab_inside_group?: string | null;
+    };
+  };
+  updatedAt?: string | null;
+  createdAt?: string | null;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "test_select".
+ */
+export interface TestSelect<T extends boolean = true> {
+  text?: T;
+  items?:
+    | T
+    | {
+        text?: T;
+        id?: T;
+      };
+  sections?:
+    | T
+    | {
+        'block-one'?:
+          | T
+          | {
+              'nonlocalized-one'?: T;
+              'text-one'?: T;
+              id?: T;
+              blockName?: T;
+            };
+        'block-two'?:
+          | T
+          | {
+              'nonlocalized-two'?: T;
+              'text-two'?: T;
+              id?: T;
+              blockName?: T;
+            };
+      };
+  NAMED_TAB?:
+    | T
+    | {
+        inside_named_tab?: T;
+      };
+  inside_unnamed_tab?: T;
+  group_field?:
+    | T
+    | {
+        text_inside_group?: T;
+        inside_unnamed_tab_inside_group?: T;
+        named_tab?:
+          | T
+          | {
+              inside_named_tab_inside_group?: T;
+            };
+      };
+  updatedAt?: T;
+  createdAt?: T;
+  globalType?: T;
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
