@@ -12,6 +12,7 @@ export const Pages: CollectionConfig = {
       name: 'text',
       type: 'text',
       required: true,
+      localized: !!process.env.LOCALIZED,
     },
   ],
 }

@@ -22,6 +22,11 @@ export default buildConfig({
   },
   collections: [Media, Pages, Users],
   editor: lexicalEditor(),
+  localization: {
+    defaultLocale: 'en',
+    locales: ['en', 'bg'],
+    fallback: true,
+  },
   secret: process.env.PAYLOAD_SECRET || '',
   typescript: {
     outputFile: path.resolve(dirname, 'payload-types.ts'),
