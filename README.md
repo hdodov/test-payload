@@ -1,8 +1,1 @@
-# blank
-
-blank
-
-## Attributes
-
-- **Database**: mongodb
-- **Storage Adapter**: localDisk
+Reproduction branch for https://github.com/payloadcms/payload/issues/9094
