@@ -32,6 +32,17 @@ export const Test: GlobalConfig = {
                       ],
                     },
                     {
+                      label: 'collapsible_test',
+                      type: 'collapsible',
+                      fields: [
+                        {
+                          name: 'inside_collapsible',
+                          type: 'text',
+                          localized: true,
+                        },
+                      ],
+                    },
+                    {
                       type: 'row',
                       fields: [
                         {

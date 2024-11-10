@@ -259,6 +259,7 @@ export interface Test {
         id?: string | null;
       }[]
     | null;
+  inside_collapsible?: string | null;
   sections?:
     | (
         | {
@@ -303,6 +304,7 @@ export interface TestSelect<T extends boolean = true> {
         text?: T;
         id?: T;
       };
+  inside_collapsible?: T;
   sections?:
     | T
     | {

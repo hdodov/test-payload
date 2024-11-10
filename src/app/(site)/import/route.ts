@@ -145,21 +145,22 @@ export async function GET() {
   // TODO: test import with updated data
 
   const updatedData = mergeContent(normalizedSchema.fields, currentData, {
-    text: 'new_bg',
+    text: 'new_bg____new_2',
     items: {
-      '1_672f7534657be00050a825d0': {
-        text: 'new_bg',
+      asdfasdf_672f7534657be00050a825d0: {
+        text: 'second_bg_2',
       },
-    },
-    sections: {
-      'block-two_672f7549657be00050a825d2': {
-        'text-two': 'new_bg',
+      '672f8c08b0fe810050b0dd5a': {
+        text: 'first_bg_2',
       },
-    },
-    group_field: {
-      inside_unnamed_tab_inside_group: 'new_bg',
     },
   })
 
-  return new Response(JSON.stringify({ currentData, updatedData }))
+  const updateResult = await payload.updateGlobal({
+    slug: 'test',
+    locale: 'bg',
+    data: updatedData,
+  })
+
+  return new Response(JSON.stringify({ currentData, updateResult }))
 }
