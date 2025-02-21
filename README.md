@@ -4,9 +4,11 @@ Example repo to play around with Payload CMS.
 
 ## Usage
 
-**Payload _inside_ Docker:**
+**Payload _inside_ Docker (with docker-compose):**
 
-1. `pnpm docker` for dev mode (with docker-compose)
+- `pnpm docker` for dev mode
+- `pnpm docker:prod` for building the container in prod mode
+- `pnpm docker:prod:lb` for a load-balanced setup
 
 **Payload outside Docker:**
 
@@ -16,4 +18,4 @@ Example repo to play around with Payload CMS.
      docker run --name mongodb -p 27017:27017 -d mongodb/mongodb-community-server:latest
      ```
 2. `pnpm dev` for dev mode
-3. `pnpm build` then `pnpm start` for prod mode
+3. `pnpm build` then `node .next/standalone/server.js` for prod mode

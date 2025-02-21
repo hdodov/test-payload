@@ -14,10 +14,7 @@ services:
       - mongo
       # - postgres
     env_file:
-      - .env
-    environment:
-      # Override localhost:27017 from .env
-      - DATABASE_URI=mongodb://host.docker.internal:27017/test-payload
+      - .env.docker
 
   # Ensure your DATABASE_URI uses 'mongo' as the hostname ie. mongodb://mongo/my-db-name
   mongo:

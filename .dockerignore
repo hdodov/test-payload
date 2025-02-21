@@ -1,0 +1,15 @@
+*.example
+
+.git
+.next
+.pnpm-store
+node_modules
+
+.dockerignore
+.env.docker
+.gitignore
+.prettierrc*
+docker-compose*
+Dockerfile
+nginx.conf
+README.md

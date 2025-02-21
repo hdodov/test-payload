@@ -14,7 +14,9 @@
     "lint": "cross-env NODE_OPTIONS=--no-deprecation next lint",
     "payload": "cross-env NODE_OPTIONS=--no-deprecation payload",
     "start": "cross-env NODE_OPTIONS=--no-deprecation next start",
-    "docker": "docker compose up --build --no-log-prefix --attach payload"
+    "docker": "docker compose up --build --no-log-prefix --attach payload",
+    "docker:prod": "docker compose --file docker-compose.prod.yml up --build --no-log-prefix --attach payload-prod",
+    "docker:prod:lb": "docker compose --file docker-compose.prod.lb.yml up --build"
   },
   "dependencies": {
     "@next/bundle-analyzer": "^15.1.7",
