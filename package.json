@@ -1,6 +1,7 @@
 {
+  "private": "true",
   "name": "test-payload",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "A blank template to get started with Payload 3.0",
   "license": "MIT",
   "type": "module",
@@ -16,40 +17,30 @@
     "docker": "docker compose up --build --no-log-prefix --attach payload"
   },
   "dependencies": {
-    "@next/bundle-analyzer": "^15.0.3",
-    "@payloadcms/db-mongodb": "3.2.1",
-    "@payloadcms/next": "3.2.1",
-    "@payloadcms/payload-cloud": "3.2.1",
-    "@payloadcms/richtext-lexical": "3.2.1",
-    "@payloadcms/ui": "3.2.1",
+    "@next/bundle-analyzer": "^15.1.7",
+    "@payloadcms/db-mongodb": "3.24.0",
+    "@payloadcms/next": "3.24.0",
+    "@payloadcms/payload-cloud": "3.24.0",
+    "@payloadcms/richtext-lexical": "3.24.0",
+    "@payloadcms/ui": "3.24.0",
     "cross-env": "^7.0.3",
-    "graphql": "^16.8.1",
-    "next": "15.0.3",
-    "payload": "3.2.1",
-    "react": "19.0.0-rc-65a56d0e-20241020",
-    "react-dom": "19.0.0-rc-65a56d0e-20241020",
-    "sharp": "0.32.6"
+    "graphql": "^16.10.0",
+    "next": "15.1.7",
+    "payload": "3.24.0",
+    "react": "19.0.0",
+    "react-dom": "19.0.0",
+    "sharp": "0.33.5"
   },
   "devDependencies": {
-    "@types/node": "^22.5.4",
-    "@types/react": "npm:types-react@19.0.0-rc.1",
-    "@types/react-dom": "npm:types-react-dom@19.0.0-rc.1",
-    "eslint": "^8",
-    "eslint-config-next": "15.0.3",
-    "typescript": "5.6.3"
+    "@types/node": "^22.13.4",
+    "@types/react": "19.0.10",
+    "@types/react-dom": "19.0.4",
+    "eslint": "^9.20.1",
+    "eslint-config-next": "15.1.7",
+    "typescript": "5.7.3"
   },
-  "engines": {
-    "node": "^18.20.2 || >=20.9.0"
+  "volta": {
+    "node": "22.14.0"
   },
-  "pnpm": {
-    "overrides": {
-      "@types/react": "npm:types-react@19.0.0-rc.1",
-      "@types/react-dom": "npm:types-react-dom@19.0.0-rc.1"
-    }
-  },
-  "overrides": {
-    "@types/react": "npm:types-react@19.0.0-rc.1",
-    "@types/react-dom": "npm:types-react-dom@19.0.0-rc.1"
-  },
-  "packageManager": "pnpm@9.12.3+sha512.cce0f9de9c5a7c95bef944169cc5dfe8741abfb145078c0d508b868056848a87c81e626246cb60967cbd7fd29a6c062ef73ff840d96b3c86c40ac92cf4a813ee"
+  "packageManager": "pnpm@10.4.1+sha512.c753b6c3ad7afa13af388fa6d808035a008e30ea9993f58c6663e2bc5ff21679aa834db094987129aa4d488b86df57f7b634981b2f827cdcacc698cc0cfb88af"
 }
