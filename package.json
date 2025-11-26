@@ -19,27 +19,27 @@
     "docker:prod:lb": "docker compose --file docker-compose.prod.lb.yml up --build"
   },
   "dependencies": {
-    "@next/bundle-analyzer": "^15.1.7",
-    "@payloadcms/db-mongodb": "3.24.0",
-    "@payloadcms/next": "3.24.0",
-    "@payloadcms/payload-cloud": "3.24.0",
-    "@payloadcms/richtext-lexical": "3.24.0",
-    "@payloadcms/ui": "3.24.0",
-    "cross-env": "^7.0.3",
-    "graphql": "^16.10.0",
-    "next": "15.1.7",
-    "payload": "3.24.0",
-    "react": "19.0.0",
-    "react-dom": "19.0.0",
-    "sharp": "0.33.5"
+    "@next/bundle-analyzer": "15.4.4",
+    "@payloadcms/db-mongodb": "3.62.1",
+    "@payloadcms/next": "3.62.1",
+    "@payloadcms/payload-cloud": "3.62.1",
+    "@payloadcms/richtext-lexical": "3.62.1",
+    "@payloadcms/ui": "3.62.1",
+    "cross-env": "10.1.0",
+    "graphql": "16.12.0",
+    "next": "15.4.4",
+    "payload": "3.62.1",
+    "react": "19.1.1",
+    "react-dom": "19.1.1",
+    "sharp": "0.34.5"
   },
   "devDependencies": {
-    "@types/node": "^22.13.4",
-    "@types/react": "19.0.10",
-    "@types/react-dom": "19.0.4",
-    "eslint": "^9.20.1",
-    "eslint-config-next": "15.1.7",
-    "typescript": "5.7.3"
+    "@types/node": "24.10.0",
+    "@types/react": "19.1.1",
+    "@types/react-dom": "19.1.1",
+    "eslint": "9.39.1",
+    "eslint-config-next": "15.4.4",
+    "typescript": "5.9.3"
   },
   "volta": {
     "node": "22.14.0"
